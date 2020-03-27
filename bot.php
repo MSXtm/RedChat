@@ -1,7 +1,11 @@
-<?php error_reporting(0);
-ob_start();
+<?php ob_start();
+
+// Error_Log => 0: Off | 1: On
+error_reporting(0);
+
 // 123456789:MSX15Awesome => بجای این قسمت، توکن ربات خود  را قرار دهید.
 define('API_KEY','123456789:MSX15Awesome');
+
 // Use Bot Manual Methods //
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
@@ -1480,7 +1484,7 @@ bot('sendmessage',[
 	'chat_id'=>$nashnas,
 	'text'=>"متاسفانه تیم مدیریت تصمیم گرفته که شما مسدود شوید، اگر فکر می کنید اشتباهی شده، به مدیریت پیام دهید.
 	
-@MahdyMirzade",
+@$poshtibani",
 ]);
 }else{
 			bot('sendmessage',[
